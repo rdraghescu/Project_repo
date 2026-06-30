@@ -216,3 +216,7 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Fisiere locale prea mari pentru GitHub (>100MB)
+Docker/5-test/projectrepo-image.tar
+*.tar

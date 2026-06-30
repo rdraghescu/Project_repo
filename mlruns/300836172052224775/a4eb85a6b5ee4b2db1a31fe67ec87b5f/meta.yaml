@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/User/Desktop/repos/Project_repo/mlruns/300836172052224775/a4eb85a6b5ee4b2db1a31fe67ec87b5f/artifacts
+end_time: 1782847836490
+entry_point_name: ''
+experiment_id: '300836172052224775'
+lifecycle_stage: active
+run_id: a4eb85a6b5ee4b2db1a31fe67ec87b5f
+run_name: best_run_n_estimators_400_max_depth_10
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782847833495
+status: 3
+tags: []
+user_id: User

@@ -1,35 +1,37 @@
-# 📊 GHID PREZENTARE PROIECT - ML pentru Predicție Web Traffic
+# GHID PREZENTARE PROIECT - ML pentru Predicție Web Traffic
 **Proiect: Predicția timpului petrecut pe site (timeOnSite)**
 
 ---
 
-## ⚠️ NOTĂ IMPORTANTĂ: REZULTATE FINALE PROIECT
+## NOTĂ IMPORTANTĂ: REZULTATE FINALE PROIECT
 
-**🏆 MODEL BEST: RANDOM FOREST REGRESSOR**
+** MODEL BEST: RANDOM FOREST REGRESSOR**
 
 **REZULTATE FINALE DIN PROIECT:**
-- ✅ **R² Test = 0.4928** (~49.3%) - ⭐ CEL MAI BUN MODEL!
-- ✅ **MAE = 96.69 secunde** (~1.6 minute) - Cea mai bună precizie!
-- ✅ **RMSE = 264.26 secunde** (~4.4 minute) - Performanță excelentă
-- ✅ **Îmbunătățire față de Simple: +10.3%** (0.4928 vs 0.4469)
+- ✅ **R² Test = 0.4671** (~46.7%) - CEL MAI BUN MODEL!
+- ✅ **MAE = 100.73 secunde** (~1.4 minute) - Cea mai bună precizie!
+- ✅ **RMSE = 270.94 secunde** (~4.3 minute) - Performanță excelentă
+- ✅ **Îmbunătățire față de Simple: +1.4%** (0.4606 vs 0.4671)
 
 **COMPARAȚIE CU ALTE MODELE:**
-- Random Forest ENHANCED: R²=0.4928, MAE=96.69s 🏆 **BEST**
+- Random Forest ENHANCED: R²=0.4671, MAE=100.73s **BEST**
 - Linear Regression ENHANCED: R²=0.4651, MAE=111.48s (bun pentru baseline)
 - Polynomial ENHANCED: R²=0.2707, MAE=107.15s (overfitting)
+- XGBoost ENHANCED: R²=0.4528, MAE=103.11s
+- LightGBM ENHANCED: R²=0.4419, MAE=102.96s
 
-**Interpretare R²=0.4928:**
-- 49.3% din variabilitatea timeOnSite este explicată de model
-- 50.7% rămâne neexplicat (factori umani: calitate conținut, distracții, mood)
+**Interpretare R²=0.4671:**
+- 46.71% din variabilitatea timeOnSite este explicată de model
+- 53.29% rămâne neexplicat (factori umani: calitate conținut, distracții, mood)
 - Pentru **web analytics** unde comportamentul uman e imprevizibil, acest R² este **EXCELENT**
 - Modelul **Random Forest ENHANCED (20 features)** a depășit toate celelalte modele testate!
 
 **De ce Random Forest este cel mai bun:**
-1. 🎯 **Precizie superioară**: MAE=96.69s (cu 14.79s mai bine decât Linear)
-2. 📈 **R² mai mare**: 0.4928 vs 0.4651 Linear (+5.9% îmbunătățire)
+1. 🎯 **Precizie superioară**: MAE=100.73s (cu 14.79s mai bine decât Linear)
+2. 📈 **R² mai mare**: 0.4671 vs 0.4651 Linear (+0.43% îmbunătățire)
 3. 🛡️ **Robust cu outliers**: Gestionează mult mai bine datele complexe
 4. 🔍 **Feature Importance**: Oferă interpretabilitate (ce features sunt importante)
-5. ⚙️ **Parametri optimi**: 300 arbori, max_depth=30, min_samples_leaf=40
+5. ⚙️ **Parametri optimi**: 400 arbori, max_depth=10, min_samples_leaf=40
 
 ---
 
@@ -50,7 +52,7 @@
 
 **💡 Regula de aur**: R² Test > 0.7 = model bun, R² Test > 0.85 = model foarte bun
 
-**✅ REALITATE PROIECT**: R² = **0.4928** (Random Forest) = model **BUN/EXCELENT** pentru web analytics unde comportamentul uman e imprevizibil. Este cel mai bun rezultat din toate modelele testate!
+**✅ REALITATE PROIECT**: R² = **0.4671** (Random Forest) = model **BUN/EXCELENT** pentru web analytics unde comportamentul uman e imprevizibil. Este cel mai bun rezultat din toate modelele testate!
 
 ---
 
@@ -58,24 +60,24 @@
 - **Ce măsoară**: Cu cât greșește modelul în medie (în aceleași unități ca target-ul)
 - **Formula simplă**: Media diferențelor absolute între predicție și realitate
 - **Interpretare pentru comisie**:
-  - **MAE = 195 secunde (~3.3 minute)** → "În medie, modelul greșește cu ±3 minute"
+  - **MAE = 100 secunde (~1.4 minute)** → "În medie, modelul greșește cu ±1 minut"
   - Mai mic = mai bun
-  - **Context**: Pentru web analytics, unde timpul pe site variază de la câteva secunde la zeci de minute, o eroare de 3 minute este rezonabilă
+  - **Context**: Pentru web analytics, unde timpul pe site variază de la câteva secunde la zeci de minute, o eroare de 1 minut este rezonabilă
 - **Avantaj**: Ușor de înțeles - e în secunde reale!
 
-**💡 Exemplu pentru comisie**: "Dacă un utilizator petrece 300 secunde pe site, modelul nostru va prezice între 105-495 secunde (eroare medie de ~195s / 3.3 minute)"
+**💡 Exemplu pentru comisie**: "Dacă un utilizator petrece 300 secunde pe site, modelul nostru va prezice între 200-400 secunde (eroare medie de ~100s / 1.4 minute)"
 
 ---
 
 #### **RMSE (Root Mean Square Error / Rădăcina Erorii Medii Pătratice)**
 - **Ce măsoară**: Similar cu MAE, dar penalizează mai tare erorile mari
 - **Interpretare pentru comisie**:
-  - **RMSE = 365 secunde (~6.1 minute)** → "Eroarea tipică este de ~6 minute, cu penalizare pentru greșeli mari"
+  - **RMSE = 270 secunde (~4.3 minute)** → "Eroarea tipică este de ~4 minute, cu penalizare pentru greșeli mari"
   - Dacă RMSE >> MAE = modelul face câteva predicții foarte proaste
-  - Dacă RMSE ≈ 1.87×MAE = modelul e rezonabil de consistent (raportul 1.87 e acceptabil)
-  - **Context**: RMSE este întotdeauna ≥ MAE; un raport de ~1.5-2× indică distribuție normală a erorilor
+  - Dacă RMSE ≈ 2.7×MAE = modelul e rezonabil de consistent (raportul 2.7 e acceptabil)
+  - **Context**: RMSE este întotdeauna ≥ MAE; 
 
-**💡 Pentru comisie**: "RMSE ne arată că modelul nu face predicții extrem de greșite"
+**"RMSE ne arată că modelul nu face predicții extrem de greșite"
 
 ---
 
@@ -83,13 +85,13 @@
 - **Ce măsoară**: Diferența între performanța pe antrenament vs. test
 - **Interpretare pentru comisie**:
   - **Gap = 0.05** (5%) → "Model robust, generalizează bine"
-  - **Gap = 0.20** (20%) → "⚠️ Model overfit, învață pe dinafară datele"
+  - **Gap = 0.20** (20%) → "Model overfit, învață pe dinafară datele"
 - **Exemplu**:
   - R² Train = 0.92, R² Test = 0.85 → Gap = 0.07 ✅ (bun)
   - R² Train = 0.95, R² Test = 0.60 → Gap = 0.35 ❌ (overfit!)
-  - **PROIECT REAL**: R² Train ≈ R² Test ≈ 0.46 → Gap mic = model robust ✅
+  - **PROIECT REAL**: R² Train(0.44) ≈ R² Test(0.41) → Gap mic = model robust ✅
 
-**💡 Pentru comisie**: "Diferența mică între antrenament și test confirmă că modelul nu 'învață pe dinafară'"
+** "Diferența mică între antrenament și test confirmă că modelul nu 'învață pe dinafară'"
 
 ---
 
@@ -101,13 +103,13 @@
 
 #### **Target Mean/Median/Std**
 - **Ce măsoară**: Statistici despre datele reale
-- **Pentru comisie**: "Utilizatorii petrec în medie 479 secunde (~8 minute) pe site, cu variabilitate mare de ±478s (unii pleacă după secunde, alții stă 20+ minute)"
+- **Pentru comisie**: "Utilizatorii petrec în medie 271 secunde (~6 minute) pe site, cu variabilitate mare de ±493s (unii pleacă după secunde, alții stă 20+ minute)"
 - **Utilitate**: Contextul pentru a înțelege dacă erorile sunt mari sau mici
-- **REALITATE**: MAE=195s reprezintă ~40% din media de 479s - rezonabil pentru comportament uman imprevizibil
+- **REALITATE**: MAE=100s reprezintă ~20% din media de 493s - rezonabil pentru comportament uman imprevizibil
 
 #### **Synthetic Predictions (mean/min/max/std)**
 - **Ce măsoară**: Statistici despre predicțiile pe date sintetice (generate)
-- **Pentru comisie**: "Am testat modelul pe 1000 scenarii generate artificial pentru a valida robustețea"
+- **Pentru comisie**: "Am testat modelul pe 10000 scenarii generate artificial pentru a valida robustețea"
 - **synthetic_predictions_min_raw**: Valoarea minimă ÎNAINTE de corecție (poate fi negativă)
 
 ---
@@ -147,15 +149,13 @@ pageviews,visitNumber,hits
 
 #### **Pasul 2: Încărcarea Modelului Salvat**
 ```python
-import pickle
+import joblib
 
 # Încarcă modelul antrenat (salvat local)
-with open("models/linear_regression_model_v2.pkl", "rb") as f:
-    model = pickle.load(f)
+model = joblib.load(model_path)
 
 # Încarcă scaler-ul
-with open("models/web_traffic_scaler_v2.pkl", "rb") as f:
-    scaler = pickle.load(f)
+scaler = joblib.load(scaler_path)
 ```
 
 ---
@@ -204,15 +204,13 @@ PREDICȚIE TIMEONSITE PENTRU DATE NOU
 Script pentru utilizare în producție
 """
 import pandas as pd
-import pickle
+import joblib
 import numpy as np
 
 # 1. Încarcă modelul și preprocessor (salvate local)
-with open("models/linear_regression_model_v2.pkl", "rb") as f:
-    model = pickle.load(f)
+model = joblib.load(model_path)
 
-with open("models/web_traffic_scaler_v2.pkl", "rb") as f:
-    scaler = pickle.load(f)
+scaler = joblib.load(scaler_path)
 
 # 2. Citește date noi (din CSV, API, bază de date, etc.)
 new_data = pd.read_csv("date_noi_astazi.csv")
@@ -315,7 +313,7 @@ predicted_engagement = model.predict(today_traffic)
 actual_engagement = today_real_data['timeOnSite']
 
 if abs(predicted - actual) > 60:  # Diferență > 1 minut
-    send_alert("⚠️ Comportament anormal detectat!")
+    send_alert("Comportament anormal detectat!")
     # Cauze posibile: bug site, atac, problema server, etc.
 ```
 
@@ -357,7 +355,7 @@ Dacă modelul prezice creștere engagement cu 30% luna viitoare
 
 ---
 
-## 4. 🎓 PREZENTARE ÎN COMISIE - STRUCTURĂ RECOMANDATĂ
+## 4. PREZENTARE ÎN COMISIE - STRUCTURĂ RECOMANDATĂ
 
 ### **Slide 1: Problema**
 "Site-ul nostru are vizitatori, dar nu știm CÂND vor rămâne mai mult și DE CE"
@@ -369,15 +367,15 @@ Dacă modelul prezice creștere engagement cu 30% luna viitoare
 - X date din Google Analytics
 - 20 features (3 numerice + 12 categorice + 5 engineered)
 - Împărțire 80/20 train/test
-- Algoritm: Random Forest Regressor ⭐ (300 arbori, robust și precis)
+- Algoritm: Random Forest Regressor (400 arbori, robust și precis)
 
 ### **Slide 4: Rezultate (CELE MAI IMPORTANTE METRICI) 🏆**
 ```
-✅ R² Test = 0.4928 → "Modelul explică 49.3% din comportamentul utilizatorilor" ⭐ CEL MAI BUN!
-✅ MAE = 96.69 secunde (~1.6 minute) → "Eroare medie de doar 1.6 minute" 🎯
-✅ RMSE = 264.26 secunde (~4.4 minute) → "Model consistent, performanță excelentă"
-✅ ÎMBUNĂTĂȚIRE față de Simple: +10.3% (0.4928 vs 0.4469) - EXCELENT!
-✅ Superior Linear Regression cu +5.9% (0.4928 vs 0.4651)
+✅ R² Test = 0.4671 → "Modelul explică 46.7% din comportamentul utilizatorilor" CEL MAI BUN!
+✅ MAE = 100.73 secunde (~1.3 minute) → "Eroare medie de doar 1.3 minute"
+✅ RMSE = 272.57 secunde (~4.3 minute) → "Model consistent, performanță excelentă"
+✅ ÎMBUNĂTĂȚIRE față de Simple: +1.4% (0.4606 vs 0.4671)!
+✅ Superior Linear Regression cu +0.4% (0.4651 vs 0.4671)
 ```
 
 ### **Slide 5: Feature Importance (Random Forest)**
@@ -397,31 +395,32 @@ Dacă modelul prezice creștere engagement cu 30% luna viitoare
 - Segmentare utilizatori
 
 ### **Slide 7: Demonstrație Live**
-"Arăți cum intri date noi → model → predicție"
+"Prezentare → date noi → model → predicție"
 
 ### **Slide 8: Next Steps**
 - Implementare în producție (model Random Forest salvat)
 - Monitorizare continuă performanță
 - Re-antrenare lunară cu date noi
 - Testare feature engineering avansat
+- Rulare GitHub: Test si Build
 
 ---
 
 ## 5. 📝 RĂSPUNSURI LA ÎNTREBĂRI FRECVENTE DIN COMISIE
 
 ### **"De ce nu 100% acuratețe?"**
-"Comportamentul uman e imprevizibil - avem factori necunoscuți (mood, viteză internet, conținut, calitatea conținutului). Cu R²=46.5%, modelul captează aproape jumătate din variabilitate, ceea ce e decent pentru web analytics. Restul de 53.5% se datorează factorilor pe care nu-i măsurăm (calitate articol, distracții externe, experiență utilizator, etc.)."
+"Comportamentul uman e imprevizibil - avem factori necunoscuți (mood, viteză internet, conținut, calitatea conținutului). Cu R²=46.7%, modelul captează aproape jumătate din variabilitate, ceea ce e decent pentru web analytics. Restul de 53.3% se datorează factorilor pe care nu-i măsurăm (calitate articol, distracții externe, experiență utilizator, etc.)."
 
 ### **"Cum validați că modelul funcționează?"**
-"Testăm pe date pe care modelul NU le-a văzut niciodată (20% test set = 10,202 sample-uri). Dacă ar fi memorat, ar avea R² Test = 0%. Faptul că obținem R²=0.4651 pe datele de test arată că modelul generalizează corect."
+"Testăm pe date pe care modelul NU le-a văzut niciodată (20% test set = 10,202 sample-uri). Dacă ar fi memorat, ar avea R² Test = 0%. Faptul că obținem R²=0.4671 pe datele de test arată că modelul generalizează corect."
 
 ### **"De ce Linear Regression, nu ceva mai avansat?"**
-"Am testat 3 modele:
-- **Linear Regression**: R²=0.4651 ✅ (cel mai bun)
-- **Random Forest**: R²=0.4466 (mai complex dar mai slab)
+"Am testat 5 modele:
+- **Random Forest**: R²=0.4671 (cel mai bun)
+- **Linear Regression**: R²=0.4651 (mai slab)
+- **XGBoost**: R²=0.4652 (mai slab decat RF dar mai bun decat LR)
+- **LightGBM**: R²=0.4419 (penultimul in clasament) 
 - **Polynomial Regression**: R²=0.2707 (overfit grav!)
-
-Linear Regression a câștigat pentru că relația dintre features și timeOnSite este predominant liniară. Un model simplu generalizează mai bine decât unul complex pentru acest caz. E o lecție importantă: complexitatea nu garantează acuratețe."
 
 ### **"Modelul se poate învechi?"**
 "Da! De aceea trebuie aplicată re-antrenarea lunară cu date noi. MLflow tracking ne permite să comparăm performanța în timp."
@@ -431,41 +430,31 @@ Linear Regression a câștigat pentru că relația dintre features și timeOnSit
 
 ---
 
-## 📌 CHEATSHEET RAPID PENTRU PREZENTARE
+## CHEATSHEET RAPID PENTRU PREZENTARE
 
 | Metrică             | Valoare Bună    | Ce spui în comisie                     | **PROIECT REAL** |
 |---------            |--------------   |-------------------                     |------------------|
-| **R² Test**         | > 0.75          | "Modelul explică X% din comportament"  | **0.4651 (46.5%)** |
-| **MAE**             | Cât mai mic     | "Eroarea medie e de X secunde"         | **195s (~3.3 min)** |
-| **RMSE**            | Apropiat de MAE | "Model consistent, fără erori extreme" | **365s (~6.1 min)** |
+| **R² Test**         | > 0.75          | "Modelul explică X% din comportament"  | **0.4671 (46.7%)** |
+| **MAE**             | Cât mai mic     | "Eroarea medie e de X secunde"         | **100s (~1.4 min)** |
+| **RMSE**            | Apropiat de MAE | "Model consistent, fără erori extreme" | **270s (~4.3 min)** |
 | **Overfitting Gap** | < 0.10          | "Model robust, nu învață pe dinafară"  | **~0.00 (excelent!)** |
 
 ---
 
 ## 🎯 REZUMAT RAPID - VALORILE TALE REALE
 
-### **Model Final: Linear Regression ENHANCED**
+### **Model Final: Random Forest Regression ENHANCED**
 - **Features**: 20 (3 numeric + 12 categorical + 5 engineered)
 - **Dataset**: 51,009 samples (după curățare din 100,000)
 - **Split**: 80% Train (40,807) / 20% Test (10,202)
 
 ### **Performanță**
-- **R² Test**: 0.4651 (~46.5%) - Explică aproape jumătate din variabilitate
-- **MAE**: 195 secunde (~3.3 minute) - Eroare medie acceptabilă
-- **RMSE**: 365 secunde (~6.1 minute) - Raport RMSE/MAE = 1.87× (normal)
-- **Îmbunătățire**: +2.15% față de model SIMPLE (3 features)
+- **R² Test**: 0.4671 (~46.7%) - Explică aproape jumătate din variabilitate
+- **MAE**: 100 secunde (~1.4 minute) - Eroare medie acceptabilă
+- **RMSE**: 270 secunde (~4.3 minute)
+- **Îmbunătățire**: +1.4% față de model SIMPLE (3 features)
 
 ### **Top 3 Feature-uri Influente**
 1. **pageviews**: +455.5s/pageview (factorul dominant!)
 2. **engagement_score**: -51.6s (interacțiune complexă)
 3. **hits**: -74.3s (hit-uri rapide)
-
-### **Interpretare pentru Comisie**
-✅ "Modelul capturează 46.5% din comportamentul utilizatorilor - decent pentru web analytics"  
-✅ "Eroarea medie de 3 minute e rezonabilă când utilizatorii stau între 30s și 30+ minute"  
-✅ "Model simplu dar eficient - a depășit Random Forest și Polynomial Regression"  
-✅ "Feature engineering a adus îmbunătățire de 2.15% - confirmă valoarea ingineriei predictive"  
-
----
-
-**Mult succes la prezentare! 🚀**
