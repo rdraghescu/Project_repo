@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/4e38b0d61dca42a39474a63b2ac10653/artifacts
+end_time: 1781282672364
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 4e38b0d61dca42a39474a63b2ac10653
+run_name: magnificent-stoat-60
+run_uuid: 4e38b0d61dca42a39474a63b2ac10653
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282667492
+status: 3
+tags: []
+user_id: User

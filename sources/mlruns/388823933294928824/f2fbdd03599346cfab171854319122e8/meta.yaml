@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/repos/Project_repo/sources/mlruns/388823933294928824/f2fbdd03599346cfab171854319122e8/artifacts
+end_time: 1779904152633
+entry_point_name: ''
+experiment_id: '388823933294928824'
+lifecycle_stage: active
+run_id: f2fbdd03599346cfab171854319122e8
+run_name: Linear_Regression_v2.0
+run_uuid: f2fbdd03599346cfab171854319122e8
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1779904144242
+status: 4
+tags: []
+user_id: User

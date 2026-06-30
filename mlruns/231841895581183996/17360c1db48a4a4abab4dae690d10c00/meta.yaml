@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/17360c1db48a4a4abab4dae690d10c00/artifacts
+end_time: 1781283422845
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 17360c1db48a4a4abab4dae690d10c00
+run_name: adaptable-vole-736
+run_uuid: 17360c1db48a4a4abab4dae690d10c00
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781283415576
+status: 3
+tags: []
+user_id: User

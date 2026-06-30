@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/18f538594bc940a6a175400ee15d9438/artifacts
+end_time: 1781282822976
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 18f538594bc940a6a175400ee15d9438
+run_name: abundant-stork-978
+run_uuid: 18f538594bc940a6a175400ee15d9438
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282817775
+status: 3
+tags: []
+user_id: User

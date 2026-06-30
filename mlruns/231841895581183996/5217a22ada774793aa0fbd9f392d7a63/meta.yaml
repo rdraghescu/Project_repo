@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/5217a22ada774793aa0fbd9f392d7a63/artifacts
+end_time: 1781282662004
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 5217a22ada774793aa0fbd9f392d7a63
+run_name: persistent-mink-291
+run_uuid: 5217a22ada774793aa0fbd9f392d7a63
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282654682
+status: 3
+tags: []
+user_id: User

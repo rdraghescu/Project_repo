@@ -1,0 +1,82 @@
+name: CI/CD Pipeline for Web Traffic Random Forest Model
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    name: Tests (bifa verde #1)
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: Docker/ci_cd_pipeline_docker
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies for tests
+        run: pip install -r requirements-dev.txt
+
+      - name: Prepare joblib model artifacts for CI
+        # Copiaza modelul real din models/ sau genereaza un RF sintetic compatibil
+        run: python prepare_ci_models.py
+
+      - name: Validate joblib artifacts before tests
+        run: python register_model.py models
+
+      - name: Run pytest suite
+        run: pytest tests/ -v --tb=short
+
+  build:
+    name: Docker build (bifa verde #2)
+    runs-on: ubuntu-latest
+    needs: test
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Prepare joblib artifacts inside pipeline folder
+        working-directory: Docker/ci_cd_pipeline_docker
+        run: |
+          pip install -r requirements-dev.txt
+          python prepare_ci_models.py
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker image
+        run: |
+          docker build \
+            -f Docker/ci_cd_pipeline_docker/Dockerfile \
+            -t web-traffic-rf-enhanced:latest \
+            .
+
+      - name: Smoke test container health endpoint
+        run: |
+          docker run -d --name rf-api-test -p 18501:8501 web-traffic-rf-enhanced:latest
+          sleep 5
+          curl -f http://localhost:18501/health
+          docker stop rf-api-test
+
+      - name: Log in to Docker Hub
+        if: github.event_name == 'push' && secrets.DOCKER_USERNAME != ''
+        run: echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+
+      - name: Push image to Docker Hub
+        if: github.event_name == 'push' && secrets.DOCKER_USERNAME != ''
+        run: |
+          docker tag web-traffic-rf-enhanced:latest ${{ secrets.DOCKER_USERNAME }}/Web_Traffic_Prediction:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/Web_Traffic_Prediction:latest

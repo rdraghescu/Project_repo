@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/0c2e9427b21540bba1306aa1cd072398/artifacts
+end_time: 1781282343808
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 0c2e9427b21540bba1306aa1cd072398
+run_name: whimsical-kit-482
+run_uuid: 0c2e9427b21540bba1306aa1cd072398
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282338505
+status: 3
+tags: []
+user_id: User

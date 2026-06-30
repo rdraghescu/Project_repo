@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/ba6f60c8e9034ef9a7c614e848d3be87/artifacts
+end_time: 1781282679449
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: ba6f60c8e9034ef9a7c614e848d3be87
+run_name: industrious-hog-287
+run_uuid: ba6f60c8e9034ef9a7c614e848d3be87
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282672397
+status: 3
+tags: []
+user_id: User

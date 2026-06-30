@@ -1,0 +1,139 @@
+{
+    "model_info": {
+        "model_type": "RandomForestRegressor",
+        "model_status": "BEST_MODEL",
+        "version": "v2.0_ENHANCED",
+        "training_date": "2026-06-09 17:56:36",
+        "mlflow_run_id": "222696ecac424260b606eb6e1f41dd1f"
+    },
+    "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 30,
+        "min_samples_split": 20,
+        "min_samples_leaf": 40,
+        "random_state": 42,
+        "n_jobs": -1
+    },
+    "features": {
+        "features_all": [
+            "pageviews",
+            "visitNumber",
+            "hits",
+            "device_category_mobile",
+            "device_category_tablet",
+            "country_Brazil",
+            "country_Canada",
+            "country_France",
+            "country_Germany",
+            "country_India",
+            "country_Japan",
+            "country_Other",
+            "country_United Kingdom",
+            "country_United States",
+            "country_Vietnam",
+            "pageviews_per_visit",
+            "engagement_score",
+            "hits_per_pageview",
+            "high_pageviews",
+            "is_returning"
+        ],
+        "n_features": 20,
+        "numeric_features": [
+            "pageviews",
+            "visitNumber",
+            "hits"
+        ],
+        "categorical_encoded": [
+            "device_category_mobile",
+            "device_category_tablet",
+            "country_Brazil",
+            "country_Canada",
+            "country_France",
+            "country_Germany",
+            "country_India",
+            "country_Japan",
+            "country_Other",
+            "country_United Kingdom",
+            "country_United States",
+            "country_Vietnam"
+        ],
+        "engineered_features": [
+            "pageviews_per_visit",
+            "engagement_score",
+            "hits_per_pageview",
+            "high_pageviews",
+            "is_returning"
+        ]
+    },
+    "dataset_info": {
+        "dataset_size": 51009,
+        "train_size": 40807,
+        "test_size": 10202,
+        "test_split_ratio": 0.2
+    },
+    "performance": {
+        "r2_train": 0.4450546004709329,
+        "r2_test": 0.40993813335232043,
+        "rmse_train": 368.30584121806305,
+        "rmse_test": 367.4406372658903,
+        "mae_train": 190.99185562602446,
+        "mae_test": 194.5666394473116,
+        "training_time_seconds": 2.1753106117248535,
+        "overfitting_gap": 0.03511646711861249
+    },
+    "target_statistics": {
+        "mean": 270.8615146346723,
+        "median": 87.0,
+        "std": 491.2397329354213,
+        "min": 1.0,
+        "max": 8999.0
+    },
+    "feature_importance_top10": [
+        {
+            "Feature": "is_returning",
+            "Importance": 0.0026506687464290506
+        },
+        {
+            "Feature": "device_category_mobile",
+            "Importance": 0.0027677813073929557
+        },
+        {
+            "Feature": "country_United States",
+            "Importance": 0.005809053108195572
+        },
+        {
+            "Feature": "country_Other",
+            "Importance": 0.006274045870962539
+        },
+        {
+            "Feature": "visitNumber",
+            "Importance": 0.006925821990746731
+        },
+        {
+            "Feature": "hits",
+            "Importance": 0.007112086630440816
+        },
+        {
+            "Feature": "pageviews_per_visit",
+            "Importance": 0.015398558330163799
+        },
+        {
+            "Feature": "hits_per_pageview",
+            "Importance": 0.019028130949032395
+        },
+        {
+            "Feature": "engagement_score",
+            "Importance": 0.02164644109759062
+        },
+        {
+            "Feature": "pageviews",
+            "Importance": 0.9092298488603279
+        }
+    ],
+    "interpretation": {
+        "r2": "MODERAT - Modelul captează tendințe generale, dar are limitări",
+        "mae": "MARE - Eroare medie >3 minute, modelul are dificultăți",
+        "rmse": "MARE - Eroare >5 minute, modelul are probleme cu outliers",
+        "overall": "BEST MODEL - Performanță superioară tuturor celorlalte modele testate"
+    }
+}

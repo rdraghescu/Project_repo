@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/048af5947bdb484189ae9d1fc572f562/artifacts
+end_time: 1781283446121
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 048af5947bdb484189ae9d1fc572f562
+run_name: chill-sloth-887
+run_uuid: 048af5947bdb484189ae9d1fc572f562
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781283438990
+status: 3
+tags: []
+user_id: User

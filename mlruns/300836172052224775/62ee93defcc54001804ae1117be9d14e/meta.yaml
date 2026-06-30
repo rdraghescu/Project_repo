@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/repos/Project_repo/mlruns/300836172052224775/62ee93defcc54001804ae1117be9d14e/artifacts
+end_time: 1782226053086
+entry_point_name: ''
+experiment_id: '300836172052224775'
+lifecycle_stage: active
+run_id: 62ee93defcc54001804ae1117be9d14e
+run_name: tune_min_samples_split_40
+run_uuid: 62ee93defcc54001804ae1117be9d14e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782226050741
+status: 3
+tags: []
+user_id: User

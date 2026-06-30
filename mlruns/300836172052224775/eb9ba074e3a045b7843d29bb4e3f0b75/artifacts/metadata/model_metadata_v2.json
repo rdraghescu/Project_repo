@@ -1,0 +1,94 @@
+{
+    "model_type": "RandomForestRegressor",
+    "model_version": "2.0_Enhanced_20features_BEST",
+    "model_status": "BEST MODEL - Cel mai performant din analiz\u0103",
+    "training_date": "2026-06-22 22:06:47",
+    "hyperparameters": {
+        "n_estimators": 300,
+        "max_depth": 30,
+        "min_samples_split": 20,
+        "min_samples_leaf": 40,
+        "random_state": 42
+    },
+    "features_total": 20,
+    "features_numeric": [
+        "pageviews",
+        "visitNumber",
+        "hits"
+    ],
+    "features_engineered": [
+        "pageviews_per_visit",
+        "engagement_score",
+        "hits_per_pageview",
+        "high_pageviews",
+        "is_returning"
+    ],
+    "features_categorical_count": 12,
+    "features_all": [
+        "pageviews",
+        "visitNumber",
+        "hits",
+        "device_category_mobile",
+        "device_category_tablet",
+        "country_grouped_Brazil",
+        "country_grouped_Canada",
+        "country_grouped_France",
+        "country_grouped_Germany",
+        "country_grouped_India",
+        "country_grouped_Japan",
+        "country_grouped_Other",
+        "country_grouped_United Kingdom",
+        "country_grouped_United States",
+        "country_grouped_Vietnam",
+        "pageviews_per_visit",
+        "engagement_score",
+        "hits_per_pageview",
+        "high_pageviews",
+        "is_returning"
+    ],
+    "feature_statistics": {
+        "pageviews": {
+            "min": 1.0,
+            "max": 275.0,
+            "mean": 6.771354074771119,
+            "median": 4.0,
+            "std": 8.678440471563356
+        },
+        "visitNumber": {
+            "min": 1.0,
+            "max": 389.0,
+            "mean": 2.3956164598404204,
+            "median": 1.0,
+            "std": 9.316163618188629
+        },
+        "hits": {
+            "min": 2.0,
+            "max": 382.0,
+            "mean": 8.25046560410908,
+            "median": 4.0,
+            "std": 12.100941941196787
+        }
+    },
+    "performance": {
+        "r2_test": 0.40993813335232043,
+        "rmse_test": 367.4406372658903,
+        "mae_test": 194.5666394473116,
+        "interpretation": {
+            "r2": "BUN",
+            "mae": "195s (~3.2 min) - Cea mai bun\u0103 precizie din toate modelele",
+            "rmse": "367s (~6.1 min) - Performan\u021b\u0103 excelent\u0103"
+        }
+    },
+    "feature_importance_top10": {
+        "pageviews": 0.9092298488603279,
+        "engagement_score": 0.02164644109759062,
+        "hits_per_pageview": 0.019028130949032395,
+        "pageviews_per_visit": 0.015398558330163799,
+        "hits": 0.007112086630440816,
+        "visitNumber": 0.006925821990746731,
+        "country_grouped_Other": 0.006274045870962539,
+        "country_grouped_United States": 0.005809053108195572,
+        "device_category_mobile": 0.0027677813073929557,
+        "is_returning": 0.0026506687464290506
+    }
+}

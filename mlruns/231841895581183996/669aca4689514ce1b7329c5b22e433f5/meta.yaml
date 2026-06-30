@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/669aca4689514ce1b7329c5b22e433f5/artifacts
+end_time: 1781282817742
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 669aca4689514ce1b7329c5b22e433f5
+run_name: resilient-pig-493
+run_uuid: 669aca4689514ce1b7329c5b22e433f5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282812408
+status: 3
+tags: []
+user_id: User

@@ -1,0 +1,10 @@
+execution_duration_ms: 1629
+request_preview: Summarize what is being said in this audio.
+request_time: '2026-05-22T07:42:18.840Z'
+response_preview: The audio contains a short beep tone. It sounds like a test signal.
+state: OK
+trace_id: tr-3e99d8b726de835801e72214f6e50164
+trace_location:
+  mlflow_experiment:
+    experiment_id: '490770468155569826'
+  type: MLFLOW_EXPERIMENT

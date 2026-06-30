@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/8a622d41abdf40a187db1a8b2bbb612d/artifacts
+end_time: 1781282326180
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 8a622d41abdf40a187db1a8b2bbb612d
+run_name: upset-hog-981
+run_uuid: 8a622d41abdf40a187db1a8b2bbb612d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282321109
+status: 3
+tags: []
+user_id: User

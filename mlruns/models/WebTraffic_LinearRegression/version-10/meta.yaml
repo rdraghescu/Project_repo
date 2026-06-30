@@ -1,0 +1,14 @@
+aliases: []
+creation_timestamp: 1779904422484
+current_stage: None
+description: null
+last_updated_timestamp: 1779904422484
+name: WebTraffic_LinearRegression
+run_id: e044cf4e55fd4b569c42398cb2394506
+run_link: null
+source: file:///C:/Users/User/Desktop/repos/Project_repo/mlruns/300836172052224775/e044cf4e55fd4b569c42398cb2394506/artifacts/linear_regression_model
+status: READY
+status_message: null
+storage_location: file:///C:/Users/User/Desktop/repos/Project_repo/mlruns/300836172052224775/e044cf4e55fd4b569c42398cb2394506/artifacts/linear_regression_model
+user_id: null
+version: 10

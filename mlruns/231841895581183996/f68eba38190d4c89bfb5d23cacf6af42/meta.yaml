@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/f68eba38190d4c89bfb5d23cacf6af42/artifacts
+end_time: 1781282788033
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: f68eba38190d4c89bfb5d23cacf6af42
+run_name: incongruous-hawk-89
+run_uuid: f68eba38190d4c89bfb5d23cacf6af42
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282782435
+status: 3
+tags: []
+user_id: User

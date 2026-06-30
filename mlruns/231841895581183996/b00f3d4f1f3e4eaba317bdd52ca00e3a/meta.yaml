@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/b00f3d4f1f3e4eaba317bdd52ca00e3a/artifacts
+end_time: 1781283451193
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: b00f3d4f1f3e4eaba317bdd52ca00e3a
+run_name: thoughtful-fawn-852
+run_uuid: b00f3d4f1f3e4eaba317bdd52ca00e3a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781283446154
+status: 3
+tags: []
+user_id: User

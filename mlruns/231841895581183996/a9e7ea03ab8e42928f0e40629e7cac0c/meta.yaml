@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/a9e7ea03ab8e42928f0e40629e7cac0c/artifacts
+end_time: 1781283457801
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: a9e7ea03ab8e42928f0e40629e7cac0c
+run_name: suave-shrimp-758
+run_uuid: a9e7ea03ab8e42928f0e40629e7cac0c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781283451227
+status: 3
+tags: []
+user_id: User

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/217f68c427d5429c9660407036b06051/artifacts
+end_time: 1781282641753
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 217f68c427d5429c9660407036b06051
+run_name: rumbling-dolphin-280
+run_uuid: 217f68c427d5429c9660407036b06051
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282636728
+status: 3
+tags: []
+user_id: User
