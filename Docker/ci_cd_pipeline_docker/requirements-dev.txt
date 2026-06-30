@@ -1,0 +1,3 @@
+# Dependinte pentru pytest pe GitHub Actions (job test)
+-r requirements_for_container.txt # -r requirements_for_container.txt inseamna ca trebuie sa incarcam fisierul requirements_for_container.txt.
+pytest==8.3.5 # pytest este o librarie in Python care permite testarea codului.

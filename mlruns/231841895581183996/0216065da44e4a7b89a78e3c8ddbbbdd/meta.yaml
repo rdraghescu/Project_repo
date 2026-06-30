@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/0216065da44e4a7b89a78e3c8ddbbbdd/artifacts
+end_time: 1781282667460
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 0216065da44e4a7b89a78e3c8ddbbbdd
+run_name: unruly-fawn-744
+run_uuid: 0216065da44e4a7b89a78e3c8ddbbbdd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282662043
+status: 3
+tags: []
+user_id: User

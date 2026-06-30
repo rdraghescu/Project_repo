@@ -1,0 +1,9 @@
+services:
+  projectrepo:
+    image: projectrepo
+    build:
+      context: ../.. #Urca 2 niveluri pentru a ajunge la radacina proiectului
+      dockerfile: ./docker/5-test/Dockerfile
+    command: ["sh", "-c", "pip install debugpy -t /tmp && python /tmp/debugpy --wait-for-client --listen 0.0.0.0:5678 sources\mlflow_ml_model_web_traffic.py "]
+    ports:
+      - 5678:5678

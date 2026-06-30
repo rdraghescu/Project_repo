@@ -1,0 +1,15 @@
+artifact_uri: file:///C:/Users/User/Desktop/repos/Project_repo/mlruns/300836172052224775/f38487bd81eb49809320d142d6258e58/artifacts
+end_time: 1782385650577
+entry_point_name: ''
+experiment_id: '300836172052224775'
+lifecycle_stage: active
+run_id: f38487bd81eb49809320d142d6258e58
+run_name: Random_Forest_ENHANCED_v2.0
+run_uuid: f38487bd81eb49809320d142d6258e58
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782385641037
+status: 3
+tags: []
+user_id: User

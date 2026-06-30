@@ -1,0 +1,16 @@
+artifact_location: file:C:/Users/User/Desktop/repos/Project_repo/mlruns/490770468155569826
+creation_time: 1779797955390
+experiment_id: '490770468155569826'
+last_update_time: 1780084778629
+lifecycle_stage: deleted
+name: MLflow Demo
+tags:
+  mlflow.demo.end_time_ms: '1779858021141'
+  mlflow.demo.start_time_ms: '1779226337791'
+  mlflow.demo.version.DemoFeature.PROMPTS: '1'
+  mlflow.demo.version.DemoFeature.TRACES: '2'
+  mlflow.experimentKind: genai_development
+  mlflow.note.content: Sample experiment with pre-populated demo data including traces,
+    evaluations, and prompts. Explore MLflow's GenAI features with this experiment.
+trace_location: null
+workspace: default

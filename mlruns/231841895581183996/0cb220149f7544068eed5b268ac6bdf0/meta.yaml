@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/0cb220149f7544068eed5b268ac6bdf0/artifacts
+end_time: 1781283429153
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 0cb220149f7544068eed5b268ac6bdf0
+run_name: valuable-smelt-762
+run_uuid: 0cb220149f7544068eed5b268ac6bdf0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781283422877
+status: 3
+tags: []
+user_id: User

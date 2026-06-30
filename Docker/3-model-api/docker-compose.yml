@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  api:
+    build: .
+    container_name: web-traffic-model-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ../../models:/app/models:ro  # Read-only acces la modele
+    environment:
+      - PYTHONUNBUFFERED=1
+      - MODEL_PATH=models/linear_regression_model_v2.pkl
+      - SCALER_PATH=models/web_traffic_scaler_v2.pkl
+      - METADATA_PATH=models/model_metadata_v2.json
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

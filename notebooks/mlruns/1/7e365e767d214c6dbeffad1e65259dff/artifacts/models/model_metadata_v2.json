@@ -1,0 +1,129 @@
+{
+    "model_info": {
+        "model_type": "LinearRegression",
+        "version": "v2.0_ENHANCED",
+        "training_date": "2026-05-30 21:03:54",
+        "mlflow_run_id": "7e365e767d214c6dbeffad1e65259dff"
+    },
+    "features": {
+        "features_all": [
+            "pageviews",
+            "visitNumber",
+            "hits",
+            "device_category_mobile",
+            "device_category_tablet",
+            "country_Brazil",
+            "country_Canada",
+            "country_France",
+            "country_Germany",
+            "country_India",
+            "country_Japan",
+            "country_Other",
+            "country_United Kingdom",
+            "country_United States",
+            "country_Vietnam",
+            "pageviews_per_visit",
+            "engagement_score",
+            "hits_per_pageview",
+            "high_pageviews",
+            "is_returning"
+        ],
+        "n_features": 20,
+        "numeric_features": [
+            "pageviews",
+            "visitNumber",
+            "hits"
+        ],
+        "categorical_encoded": [
+            "device_category_mobile",
+            "device_category_tablet",
+            "country_Brazil",
+            "country_Canada",
+            "country_France",
+            "country_Germany",
+            "country_India",
+            "country_Japan",
+            "country_Other",
+            "country_United Kingdom",
+            "country_United States",
+            "country_Vietnam"
+        ],
+        "engineered_features": [
+            "pageviews_per_visit",
+            "engagement_score",
+            "hits_per_pageview",
+            "high_pageviews",
+            "is_returning"
+        ]
+    },
+    "dataset_info": {
+        "dataset_size": 51009,
+        "train_size": 40807,
+        "test_size": 10202,
+        "test_split_ratio": 0.2
+    },
+    "performance": {
+        "r2_train": 0.42571635747666103,
+        "r2_test": 0.41668930373679613,
+        "rmse_train": 374.6680863368131,
+        "rmse_test": 365.33256101866857,
+        "mae_train": 194.93638620902632,
+        "mae_test": 195.0322136850884,
+        "training_time_seconds": 0.015765905380249023,
+        "overfitting_gap": 0.009027053739864899
+    },
+    "target_statistics": {
+        "mean": 270.8615146346723,
+        "median": 87.0,
+        "std": 491.2397329354213,
+        "min": 1.0,
+        "max": 8999.0
+    },
+    "coefficients_top10": [
+        {
+            "Feature": "hits_per_pageview",
+            "Coefficient": -6.347591440451131
+        },
+        {
+            "Feature": "high_pageviews",
+            "Coefficient": 9.418605651125063
+        },
+        {
+            "Feature": "country_Other",
+            "Coefficient": 12.263496578534443
+        },
+        {
+            "Feature": "visitNumber",
+            "Coefficient": 12.768440260085512
+        },
+        {
+            "Feature": "is_returning",
+            "Coefficient": 19.307440651848587
+        },
+        {
+            "Feature": "country_United States",
+            "Coefficient": -22.22440208801359
+        },
+        {
+            "Feature": "pageviews_per_visit",
+            "Coefficient": -30.6850295456134
+        },
+        {
+            "Feature": "engagement_score",
+            "Coefficient": -51.64173552143506
+        },
+        {
+            "Feature": "hits",
+            "Coefficient": -74.27513305220465
+        },
+        {
+            "Feature": "pageviews",
+            "Coefficient": 455.5255096388482
+        }
+    ],
+    "interpretation": {
+        "r2": "MODERAT - Modelul captează tendințe generale, dar are limitări",
+        "mae": "MARE - Eroare medie >3 minute, modelul are dificultăți",
+        "rmse": "MARE - Eroare >5 minute, modelul are probleme cu outliers"
+    }
+}

@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/d092c79a8a7544518f4d36818bf0002c/artifacts
+end_time: 1781282355753
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: d092c79a8a7544518f4d36818bf0002c
+run_name: bright-flea-268
+run_uuid: d092c79a8a7544518f4d36818bf0002c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282350754
+status: 3
+tags: []
+user_id: User

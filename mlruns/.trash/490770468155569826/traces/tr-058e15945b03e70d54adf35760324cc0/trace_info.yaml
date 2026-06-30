@@ -1,0 +1,14 @@
+execution_duration_ms: 1529
+request_preview: '{"query": "How do I use mlflow.evaluate() to assess my LLM''s output
+  quality?"}'
+request_time: '2026-05-23T19:21:18.846Z'
+response_preview: '{"response": "Use mlflow.evaluate() by passing your model/data
+  and a list of scorers like relevance() or faithfulness(). It returns per-row scores
+  and aggregate metrics, all automatically logged to your MLflow experiment for easy
+  comparison."}'
+state: OK
+trace_id: tr-058e15945b03e70d54adf35760324cc0
+trace_location:
+  mlflow_experiment:
+    experiment_id: '490770468155569826'
+  type: MLFLOW_EXPERIMENT

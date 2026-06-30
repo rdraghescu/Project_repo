@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/User/Desktop/repos/Project_repo/mlruns/300836172052224775/7e48069ee98442659fe4e240e3b20b94/artifacts
+end_time: 1782384114213
+entry_point_name: ''
+experiment_id: '300836172052224775'
+lifecycle_stage: active
+run_id: 7e48069ee98442659fe4e240e3b20b94
+run_name: tune_weak_config_low
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782384113045
+status: 3
+tags: []
+user_id: User

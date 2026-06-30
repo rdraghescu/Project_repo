@@ -1,0 +1,6 @@
+services:
+  projectrepo:
+    image: projectrepo
+    build:
+      context: ../.. #Urca 2 niveluri pentru a ajunge la radacina proiectului
+      dockerfile: ./docker/5-test/Dockerfile

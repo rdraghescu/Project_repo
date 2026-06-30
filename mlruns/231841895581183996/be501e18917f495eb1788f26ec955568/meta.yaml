@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/be501e18917f495eb1788f26ec955568/artifacts
+end_time: 1781282313776
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: be501e18917f495eb1788f26ec955568
+run_name: gaudy-sponge-976
+run_uuid: be501e18917f495eb1788f26ec955568
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282306640
+status: 3
+tags: []
+user_id: User

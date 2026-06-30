@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  jupyter:
+    build: .
+    container_name: jupyter-ml-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ../..:/workspace  # Mount întregul proiect
+      - jupyter-data:/root/.jupyter
+    environment:
+      - PYTHONUNBUFFERED=1
+      - JUPYTER_ENABLE_LAB=yes
+    restart: unless-stopped
+
+volumes:
+  jupyter-data:
+    driver: local

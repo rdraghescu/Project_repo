@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/fba5b90248ce4c51a28987d7af743805/artifacts
+end_time: 1781282775411
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: fba5b90248ce4c51a28987d7af743805
+run_name: resilient-elk-284
+run_uuid: fba5b90248ce4c51a28987d7af743805
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282768348
+status: 3
+tags: []
+user_id: User

@@ -1,0 +1,7 @@
+La activarea Cursor si instalarea mlflow versiune 3.11, pagina de experimente din aplicatia mlflow nu functiona. Am activat AI curso si am corectat situatia prin AI. Astfel ca acesta a procedata la urmatoaree modificari =>
+Ce am făcut deja (pentru test)
+Am mutat folderul corupt mlruns/1 în mlruns/.trash/broken_experiment_1
+Am migrat datele din mlruns în mlflow.db (79 runs, inclusiv Web_Traffic_Prediction)
+Am pornit un server de test pe SQLite — API-urile răspund corect și experimentul apare
+
+

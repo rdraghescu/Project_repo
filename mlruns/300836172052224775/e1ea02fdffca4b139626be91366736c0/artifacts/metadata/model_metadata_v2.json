@@ -1,0 +1,44 @@
+{
+    "model_type": "LinearRegression",
+    "model_version": "2.0",
+    "training_date": "2026-05-27 20:54:31",
+    "features": [
+        "pageviews",
+        "visitNumber",
+        "hits"
+    ],
+    "feature_statistics": {
+        "pageviews": {
+            "min": 1.0,
+            "max": 275.0,
+            "mean": 6.771354074771119,
+            "median": 4.0,
+            "std": 8.678440471563356
+        },
+        "visitNumber": {
+            "min": 1.0,
+            "max": 389.0,
+            "mean": 2.3956164598404204,
+            "median": 1.0,
+            "std": 9.316163618188629
+        },
+        "hits": {
+            "min": 2.0,
+            "max": 382.0,
+            "mean": 8.25046560410908,
+            "median": 4.0,
+            "std": 12.100941941196787
+        }
+    },
+    "performance": {
+        "r2_test": 0.4109697540160354,
+        "rmse_test": 367.11929369128075,
+        "mae_test": 197.50312863773226
+    },
+    "coefficients": {
+        "pageviews": 437.24118854101863,
+        "visitNumber": 18.072178301046264,
+        "hits": -123.5602293033482
+    },
+    "intercept": 270.81716372191045
+}

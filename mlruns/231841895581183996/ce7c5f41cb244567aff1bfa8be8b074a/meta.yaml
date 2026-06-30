@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/ce7c5f41cb244567aff1bfa8be8b074a/artifacts
+end_time: 1781282800395
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: ce7c5f41cb244567aff1bfa8be8b074a
+run_name: incongruous-finch-8
+run_uuid: ce7c5f41cb244567aff1bfa8be8b074a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282793152
+status: 3
+tags: []
+user_id: User

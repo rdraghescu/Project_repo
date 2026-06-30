@@ -1,0 +1,15 @@
+artifact_uri: mlflow-artifacts:/231841895581183996/77ee9f6fca764d60b013d1dacdfc0815/artifacts
+end_time: 1781282649492
+entry_point_name: ''
+experiment_id: '231841895581183996'
+lifecycle_stage: active
+run_id: 77ee9f6fca764d60b013d1dacdfc0815
+run_name: burly-mare-911
+run_uuid: 77ee9f6fca764d60b013d1dacdfc0815
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1781282641786
+status: 3
+tags: []
+user_id: User

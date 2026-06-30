@@ -1,0 +1,87 @@
+{
+    "model_type": "LinearRegression",
+    "model_version": "2.0_Enhanced_20features",
+    "training_date": "2026-05-29 22:20:11",
+    "features_total": 20,
+    "features_numeric": [
+        "pageviews",
+        "visitNumber",
+        "hits"
+    ],
+    "features_engineered": [
+        "pageviews_per_visit",
+        "engagement_score",
+        "hits_per_pageview",
+        "high_pageviews",
+        "is_returning"
+    ],
+    "features_categorical_count": 12,
+    "features_all": [
+        "pageviews",
+        "visitNumber",
+        "hits",
+        "device_category_mobile",
+        "device_category_tablet",
+        "country_grouped_Brazil",
+        "country_grouped_Canada",
+        "country_grouped_France",
+        "country_grouped_Germany",
+        "country_grouped_India",
+        "country_grouped_Japan",
+        "country_grouped_Other",
+        "country_grouped_United Kingdom",
+        "country_grouped_United States",
+        "country_grouped_Vietnam",
+        "pageviews_per_visit",
+        "engagement_score",
+        "hits_per_pageview",
+        "high_pageviews",
+        "is_returning"
+    ],
+    "feature_statistics": {
+        "pageviews": {
+            "min": 1.0,
+            "max": 275.0,
+            "mean": 6.771354074771119,
+            "median": 4.0,
+            "std": 8.678440471563356
+        },
+        "visitNumber": {
+            "min": 1.0,
+            "max": 389.0,
+            "mean": 2.3956164598404204,
+            "median": 1.0,
+            "std": 9.316163618188629
+        },
+        "hits": {
+            "min": 2.0,
+            "max": 382.0,
+            "mean": 8.25046560410908,
+            "median": 4.0,
+            "std": 12.100941941196787
+        }
+    },
+    "performance": {
+        "r2_test": 0.41668930373679613,
+        "rmse_test": 365.33256101866857,
+        "mae_test": 195.0322136850884,
+        "interpretation": {
+            "r2": "Acceptabil",
+            "mae": "195s (~3.3 min) - Eroare medie acceptabil\u0103 pentru web analytics",
+            "rmse": "365s (~6.1 min) - Eroare r\u0103d\u0103cin\u0103 medie acceptabil\u0103"
+        }
+    },
+    "coefficients_top10": {
+        "pageviews": 455.5255096388482,
+        "hits": -74.27513305220465,
+        "engagement_score": -51.64173552143506,
+        "pageviews_per_visit": -30.6850295456134,
+        "country_grouped_United States": -22.22440208801359,
+        "is_returning": 19.307440651848587,
+        "visitNumber": 12.768440260085512,
+        "country_grouped_Other": 12.263496578534443,
+        "high_pageviews": 9.418605651125063,
+        "hits_per_pageview": -6.347591440451131
+    },
+    "intercept": 270.81716372191045
+}
