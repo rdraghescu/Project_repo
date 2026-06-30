@@ -82,5 +82,6 @@ jobs:
       - name: Push image to Docker Hub
         if: github.event_name == 'push'
         run: |
-          docker tag web-traffic-rf-enhanced:latest ${{ secrets.DOCKER_USERNAME }}/Web_Traffic_Prediction:latest
-          docker push ${{ secrets.DOCKER_USERNAME }}/Web_Traffic_Prediction:latest
+          # Docker Hub: numele repository-ului trebuie sa fie lowercase
+          docker tag web-traffic-rf-enhanced:latest ${{ secrets.DOCKER_USERNAME }}/web-traffic-prediction:latest
+          docker push ${{ secrets.DOCKER_USERNAME }}/web-traffic-prediction:latest
