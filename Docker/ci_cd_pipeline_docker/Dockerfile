@@ -12,6 +12,7 @@ RUN pip install --no-cache-dir -r requirements_for_container.txt
 
 # Cod servire + feature engineering
 COPY Docker/ci_cd_pipeline_docker/feature_engineering.py .
+COPY Docker/ci_cd_pipeline_docker/metadata_utils.py .
 COPY Docker/ci_cd_pipeline_docker/model_loader.py .
 COPY Docker/ci_cd_pipeline_docker/serve_model.py .
 
