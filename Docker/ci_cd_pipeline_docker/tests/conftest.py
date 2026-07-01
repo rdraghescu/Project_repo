@@ -8,12 +8,6 @@ import json
 import sys
 from pathlib import Path # Path este o clasa in Python care reprezinta un drum (cale) in sistemul de fisiere.
 
-import joblib # joblib este o librarie in Python care permite incarcarea si salvarea modelelor in format joblib.
-import pytest # pytest este o librarie in Python care permite testarea codului.
-from metadata_utils import get_features_all
-from sklearn.ensemble import RandomForestRegressor # RandomForestRegressor este o clasa in Python care reprezinta un model Random Forest.
-from sklearn.preprocessing import StandardScaler # StandardScaler este o clasa in Python care standardizeaza datele.
-
 PIPELINE_DIR = Path(__file__).resolve().parents[1] # Path(__file__).resolve().parents[1] este o cale absoluta catre directorul curent. 1 din parents inseamna un nivel mai sus in structura de directoare.
 PROJECT_ROOT = PIPELINE_DIR.parent.parent # Project_ROOT este directorul root al proiectului.
 METADATA_SOURCE = PROJECT_ROOT / "models" / "model_metadata_v2.json"
@@ -22,6 +16,12 @@ METADATA_SOURCE = PROJECT_ROOT / "models" / "model_metadata_v2.json"
 if str(PIPELINE_DIR) not in sys.path:
     sys.path.insert(0, str(PIPELINE_DIR))
 
+import joblib # joblib este o librarie in Python care permite incarcarea si salvarea modelelor in format joblib.
+import pytest # pytest este o librarie in Python care permite testarea codului.
+from metadata_utils import get_features_all
+from sklearn.ensemble import RandomForestRegressor # RandomForestRegressor este o clasa in Python care reprezinta un model Random Forest.
+from sklearn.preprocessing import StandardScaler # StandardScaler este o clasa in Python care standardizeaza datele.
+git add 
 
 @pytest.fixture(scope="session")
 def metadata() -> dict:
