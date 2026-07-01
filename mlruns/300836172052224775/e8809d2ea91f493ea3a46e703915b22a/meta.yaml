@@ -1,0 +1,14 @@
+artifact_uri: file:///C:/Users/User/Desktop/repos/Project_repo/mlruns/300836172052224775/e8809d2ea91f493ea3a46e703915b22a/artifacts
+end_time: 1782923288930
+entry_point_name: ''
+experiment_id: '300836172052224775'
+lifecycle_stage: active
+run_id: e8809d2ea91f493ea3a46e703915b22a
+run_name: tune_max_depth_50
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1782923285886
+status: 3
+tags: []
+user_id: User
