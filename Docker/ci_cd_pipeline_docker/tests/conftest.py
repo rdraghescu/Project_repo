@@ -21,7 +21,7 @@ import pytest # pytest este o librarie in Python care permite testarea codului.
 from metadata_utils import get_features_all
 from sklearn.ensemble import RandomForestRegressor # RandomForestRegressor este o clasa in Python care reprezinta un model Random Forest.
 from sklearn.preprocessing import StandardScaler # StandardScaler este o clasa in Python care standardizeaza datele.
-git add 
+
 
 @pytest.fixture(scope="session")
 def metadata() -> dict:
