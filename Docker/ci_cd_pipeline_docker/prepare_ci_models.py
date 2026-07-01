@@ -10,9 +10,10 @@ Pentru productie: inlocuieste fisierele cu cele reale dupa antrenare.
 from __future__ import annotations
 
 import json
-import shutil
 import sys
 from pathlib import Path
+
+from metadata_utils import get_features_all
 
 import joblib
 import numpy as np
@@ -58,7 +59,7 @@ def _create_synthetic_models() -> None:
     with open(metadata_path, encoding="utf-8") as handle:
         metadata = json.load(handle)
 
-    features_all = metadata["features_all"]
+    features_all = get_features_all(metadata)
     n_features = len(features_all)
 
     rng = np.random.default_rng(42)

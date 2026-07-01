@@ -10,6 +10,7 @@ from pathlib import Path # Path este o clasa in Python care reprezinta un drum (
 
 import joblib # joblib este o librarie in Python care permite incarcarea si salvarea modelelor in format joblib.
 import pytest # pytest este o librarie in Python care permite testarea codului.
+from metadata_utils import get_features_all
 from sklearn.ensemble import RandomForestRegressor # RandomForestRegressor este o clasa in Python care reprezinta un model Random Forest.
 from sklearn.preprocessing import StandardScaler # StandardScaler este o clasa in Python care standardizeaza datele.
 
@@ -37,7 +38,7 @@ def models_dir(tmp_path: Path, metadata: dict) -> Path:
     """
     import numpy as np
 
-    features_all = metadata["features_all"]
+    features_all = get_features_all(metadata)
     n_features = len(features_all)
 
     rng = np.random.default_rng(42)

@@ -1,25 +1,33 @@
 """Teste pentru transformarea celor 20 features ENHANCED."""
 
 from feature_engineering import engineer_features_from_input
+from metadata_utils import (
+    country_column_prefix,
+    get_features_all,
+    get_pageviews_median,
+)
 
 
 def test_engineer_features_returns_20_columns(metadata, sample_payload):
+    features_all = get_features_all(metadata)
     features_df = engineer_features_from_input(
         sample_payload,
-        features_all=metadata["features_all"],
-        pageviews_median=metadata["feature_statistics"]["pageviews"]["median"],
+        features_all=features_all,
+        pageviews_median=get_pageviews_median(metadata),
     )
     assert features_df.shape == (1, 20)
-    assert list(features_df.columns) == metadata["features_all"]
+    assert list(features_df.columns) == features_all
 
 
 def test_engineered_formulas(metadata, sample_payload):
+    features_all = get_features_all(metadata)
     features_df = engineer_features_from_input(
         sample_payload,
-        features_all=metadata["features_all"],
+        features_all=features_all,
         pageviews_median=4.0,
     )
     row = features_df.iloc[0]
+    country_col = f"{country_column_prefix(features_all)}United States"
 
     assert row["pageviews_per_visit"] == sample_payload["pageviews"] / (
         sample_payload["visitNumber"] + 1
@@ -27,10 +35,12 @@ def test_engineered_formulas(metadata, sample_payload):
     assert row["engagement_score"] == sample_payload["pageviews"] * sample_payload["hits"]
     assert row["is_returning"] == 1
     assert row["device_category_mobile"] == 0
-    assert row["country_grouped_United States"] == 1
+    assert row[country_col] == 1
 
 
 def test_unknown_country_maps_to_other(metadata):
+    features_all = get_features_all(metadata)
+    other_col = f"{country_column_prefix(features_all)}Other"
     payload = {
         "pageviews": 3,
         "visitNumber": 1,
@@ -40,7 +50,7 @@ def test_unknown_country_maps_to_other(metadata):
     }
     features_df = engineer_features_from_input(
         payload,
-        features_all=metadata["features_all"],
+        features_all=features_all,
     )
-    assert features_df.iloc[0]["country_grouped_Other"] == 1
+    assert features_df.iloc[0][other_col] == 1
     assert features_df.iloc[0]["device_category_mobile"] == 1

@@ -15,17 +15,24 @@ from datetime import datetime, timezone
 from flask import Flask, jsonify, request
 
 from feature_engineering import engineer_features_from_input
+from metadata_utils import (
+    get_features_all,
+    get_hyperparameters,
+    get_model_type,
+    get_model_version,
+    get_features_total,
+    get_pageviews_median,
+    get_performance,
+)
 from model_loader import load_artifacts
 
 app = Flask(__name__)
 
 # Incarcam artefactele la pornirea containerului / procesului
 MODEL, SCALER, METADATA = load_artifacts()
-FEATURES_ALL = METADATA["features_all"]
-PAGE_VIEWS_MEDIAN = METADATA.get("feature_statistics", {}).get("pageviews", {}).get(
-    "median", 4.0
-)
-MODEL_VERSION = METADATA.get("model_version", "2.0_Enhanced_20features_BEST")
+FEATURES_ALL = get_features_all(METADATA)
+PAGE_VIEWS_MEDIAN = get_pageviews_median(METADATA)
+MODEL_VERSION = get_model_version(METADATA)
 
 
 @app.route("/health", methods=["GET"])
@@ -37,14 +44,14 @@ def health():
 @app.route("/model-info", methods=["GET"])
 def model_info():
     """Returneaza informatii despre modelul incarcat (din metadata JSON)."""
-    performance = METADATA.get("performance", {})
+    performance = get_performance(METADATA)
     return jsonify(
         {
-            "model_type": METADATA.get("model_type"),
+            "model_type": get_model_type(METADATA),
             "model_version": MODEL_VERSION,
-            "features_total": METADATA.get("features_total", len(FEATURES_ALL)),
+            "features_total": get_features_total(METADATA),
             "features_all": FEATURES_ALL,
-            "hyperparameters": METADATA.get("hyperparameters", {}),
+            "hyperparameters": get_hyperparameters(METADATA),
             "performance": performance,
         }
     ), 200

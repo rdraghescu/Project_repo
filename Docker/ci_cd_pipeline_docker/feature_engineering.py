@@ -9,6 +9,8 @@ from typing import Any
 
 import pandas as pd
 
+from metadata_utils import country_column_prefix
+
 # Tarile din metadata (One-Hot, fara drop_first pe country -> 10 coloane)
 TOP_COUNTRIES = [
     "Brazil",
@@ -47,8 +49,9 @@ def engineer_features_from_input(
 
     # One-Hot country (grupare: tari din top sau Other)
     country_grouped = country if country in TOP_COUNTRIES else "Other"
+    country_prefix = country_column_prefix(features_all)
     country_flags = {
-        f"country_grouped_{name}": (1 if country_grouped == name else 0)
+        f"{country_prefix}{name}": (1 if country_grouped == name else 0)
         for name in TOP_COUNTRIES
     }
 
